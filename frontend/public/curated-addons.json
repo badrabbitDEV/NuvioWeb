@@ -1,0 +1,22 @@
+{
+  "name": "Nuvio Web curated defaults",
+  "description": "Base catalog and subtitle services. Add only entries reviewed by the repository maintainer.",
+  "addons": [
+    {
+      "name": "Nuvio Catalog",
+      "description": "Catálogos oficiais do Nuvio com metadados TMDB.",
+      "manifestUrl": "https://catalog.nuvio.tv/manifest.json",
+      "adult": false,
+      "category": "catalog",
+      "configurable": true
+    },
+    {
+      "name": "OpenSubtitles v3",
+      "description": "Addon oficial do Stremio para legendas OpenSubtitles.",
+      "manifestUrl": "https://opensubtitles-v3.strem.io/manifest.json",
+      "adult": false,
+      "category": "subtitles",
+      "configurable": false
+    }
+  ]
+}
