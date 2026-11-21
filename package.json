@@ -1,0 +1,19 @@
+{
+  "name": "nuvio-web-port",
+  "private": true,
+  "version": "1.0.4",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @nuvio/web && npm run build --workspace @nuvio/api",
+    "build:web": "npm run build --workspace @nuvio/web",
+    "build:api": "npm run build --workspace @nuvio/api",
+    "typecheck": "npm run typecheck --workspace @nuvio/web && npm run typecheck --workspace @nuvio/api",
+    "test": "npm run test --workspace @nuvio/api"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

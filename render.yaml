@@ -1,0 +1,51 @@
+services:
+  - type: web
+    name: nuvio-web-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "4000"
+      - key: CORS_ORIGINS
+        sync: false
+      - key: TMDB_API_READ_TOKEN
+        sync: false
+      - key: ADDON_ALLOW_HTTP
+        value: "false"
+      - key: TRAKT_CLIENT_ID
+        sync: false
+      - key: TRAKT_CLIENT_SECRET
+        sync: false
+      - key: SIMKL_CLIENT_ID
+        sync: false
+      - key: SIMKL_CLIENT_SECRET
+        sync: false
+      - key: WETRAKR_CLIENT_ID
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: SYNC_JWT_SECRET
+        sync: false
+      - key: ADMIN_API_KEY
+        sync: false
+      - key: FFMPEG_PATH
+        value: ffmpeg
+      - key: PUBLIC_API_BASE_URL
+        sync: false
+      - key: MEDIA_TRANSCODE_ENABLED
+        value: "false"
+      - key: MEDIA_MAX_CONCURRENT
+        value: "1"
+      - key: MEDIA_SESSION_TTL_SECONDS
+        value: "7200"
+      - key: MEDIA_MAX_INPUT_GB
+        value: "12"
+      - key: MEDIA_MAX_DURATION_SECONDS
+        value: "7200"
+      - key: MEDIA_MAX_HEIGHT
+        value: "720"
