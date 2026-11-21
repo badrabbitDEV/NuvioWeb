@@ -1,0 +1,12 @@
+.git
+.github
+**/node_modules
+**/dist
+**/coverage
+**/.env
+**/.env.local
+**/.vercel
+**/.render
+*.zip
+*.log
+.DS_Store
